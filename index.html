@@ -1,0 +1,469 @@
+<!DOCTYPE html><html lang="en"><head>
+	
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width"/>
+<meta name="builder" content="Stronglify"/>
+<link rel="icon" type="image/x-icon" href="https://media.stronglify.com/295/favicon-1790951408-1791391758.svg"/>
+<title>Avatar Changer | Pick who you are today</title>
+<meta name="description" content="Avatar Changer is a tiny desktop dialog for choosing your on-screen companion. Pick one from the list, preview it, and set it as your default."/>
+<meta name="robots" content="index"/>
+<link rel="canonical" href="https://stronglifythemes.github.io/"/><style>
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}img{max-width:100%;height:auto}
+</style><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;display=swap" rel="stylesheet"/>
+<script src="https://media.stronglify.com/tailwind-play-3.4.17.js"></script>
+<script>tailwind.config={theme:{extend:{colors:{desk:"#3A6EA5",face:"#D4D0C8",hilite:"#FFFFFF",shade:"#808080",dark:"#404040",navy:"#0A246A",sky:"#A6CAF0",tip:"#FFFFE1"},fontFamily:{system:['"Jersey 15"',"Tahoma","Verdana","Geneva","sans-serif"]}}}};</script>
+<style>:root{--s: min(calc((100vw - 280px) / 330), calc((100svh - 170px) / 266), 2.5px);--b: 2px;--fs: calc(var(--s) * 13.5);--row: calc(var(--s) * 13);--win-w: calc(var(--s) * 330);--title-h: calc(var(--s) * 18);--head-h: calc(var(--s) * 15);--list-w: calc(var(--s) * 115);--pane-h: calc(var(--s) * 136);--gap: calc(var(--s) * 10);--sb-w: calc(var(--s) * 16);--btn-h: calc(var(--s) * 22);--c: min(calc((100svh - 268px) / 20), calc((100vw - 524px) / 10), 32px);--n: calc(var(--c) * .7);--bv: 3px;--side-w: 170px;--tgap: 14px;--tpad: 16px;--tfs: 22px;--pad-h: 40px}@media(max-width:699px){:root{--s: 1.5px;--fs: 19px;--row: 27px;--win-w: min(calc(100vw - 20px), 440px);--title-h: 30px;--head-h: 28px;--list-w: 45%;--pane-h: calc(var(--row) * 9.5);--gap: 8px;--sb-w: 22px;--btn-h: 38px;--c: min(calc((100svh - 376px) / 20), calc((100vw - 164px) / 10), 26px);--bv: 2px;--side-w: 92px;--tgap: 8px;--tpad: 10px;--tfs: 17px;--pad-h: 48px}}.raised{background:#D4D0C8;box-shadow:inset calc(var(--b) * -1) calc(var(--b) * -1) 0 #404040,inset var(--b) var(--b) 0 #FFFFFF,inset calc(var(--b) * -2) calc(var(--b) * -2) 0 #808080,inset calc(var(--b) * 2) calc(var(--b) * 2) 0 #D4D0C8}.raised-win{background:#D4D0C8;box-shadow:inset calc(var(--b) * -1) calc(var(--b) * -1) 0 #404040,inset var(--b) var(--b) 0 #D4D0C8,inset calc(var(--b) * -2) calc(var(--b) * -2) 0 #808080,inset calc(var(--b) * 2) calc(var(--b) * 2) 0 #FFFFFF,calc(var(--s) * 3) calc(var(--s) * 3) 0 rgba(0,0,0,.28)}.sunken{box-shadow:inset calc(var(--b) * -1) calc(var(--b) * -1) 0 #FFFFFF,inset var(--b) var(--b) 0 #808080,inset calc(var(--b) * -2) calc(var(--b) * -2) 0 #D4D0C8,inset calc(var(--b) * 2) calc(var(--b) * 2) 0 #404040;padding:calc(var(--b) * 2)}.sunken-thin{box-shadow:inset calc(var(--b) * -1) calc(var(--b) * -1) 0 #FFFFFF,inset var(--b) var(--b) 0 #808080}.btn{cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}.btn:active{box-shadow:inset var(--b) var(--b) 0 #404040,inset calc(var(--b) * -1) calc(var(--b) * -1) 0 #FFFFFF,inset calc(var(--b) * 2) calc(var(--b) * 2) 0 #808080,inset calc(var(--b) * -2) calc(var(--b) * -2) 0 #D4D0C8}.btn:active .btn-in{transform:translate(var(--b),var(--b))}.btn:focus-visible{outline:1px dotted #000;outline-offset:calc(var(--b) * -3 - 1px)}.dither{background-color:#FFFFFF;background-image:linear-gradient(45deg,#D4D0C8 25%,transparent 25%,transparent 75%,#D4D0C8 75%),linear-gradient(45deg,#D4D0C8 25%,transparent 25%,transparent 75%,#D4D0C8 75%);background-size:calc(var(--b) * 2) calc(var(--b) * 2);background-position:0 0,var(--b) var(--b)}.btn:disabled{color:#808080;text-shadow:1px 1px 0 #FFFFFF;cursor:default}.task[aria-pressed=true]{box-shadow:inset var(--b) var(--b) 0 #404040,inset calc(var(--b) * -1) calc(var(--b) * -1) 0 #FFFFFF,inset calc(var(--b) * 2) calc(var(--b) * 2) 0 #808080,inset calc(var(--b) * -2) calc(var(--b) * -2) 0 #D4D0C8;background-color:#FFFFFF;background-image:linear-gradient(45deg,#D4D0C8 25%,transparent 25%,transparent 75%,#D4D0C8 75%),linear-gradient(45deg,#D4D0C8 25%,transparent 25%,transparent 75%,#D4D0C8 75%);background-size:calc(var(--b) * 2) calc(var(--b) * 2);background-position:0 0,var(--b) var(--b)}.names{scrollbar-width:none}.names::-webkit-scrollbar{display:none}.name[aria-selected=true]{background:#0A246A;color:#FFFFFF}.names:focus-visible .name[aria-selected=true]{outline:1px dotted #FFE28A;outline-offset:-1px}.desk-icon{-webkit-tap-highlight-color:transparent}.desk-icon:focus .icon-label{background:#0A246A;outline:1px dotted #FFFFFF;outline-offset:-1px;text-shadow:none}.icon-label{text-shadow:1px 1px 0 rgba(0,0,0,.65)}.avatar{width:100%;height:100%}.avatar [class^=a-]{transform-box:fill-box;transform-origin:center}@keyframes a-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}@keyframes a-hover{0%,100%{transform:translateY(2px)}50%{transform:translateY(-7px)}}@keyframes a-shadow{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.82);opacity:.7}}@keyframes a-blink{0%,91%,100%{transform:scaleY(1)}95%{transform:scaleY(.08)}}@keyframes a-wave{0%,60%,100%{transform:rotate(0deg)}70%{transform:rotate(-16deg)}80%{transform:rotate(8deg)}90%{transform:rotate(-12deg)}}@keyframes a-jiggle{0%,100%{transform:scale(1,1)}30%{transform:scale(1.05,.94)}60%{transform:scale(.96,1.05)}80%{transform:scale(1.02,.98)}}@keyframes a-pop{0%,55%,100%{transform:translateY(12px)}62%{transform:translateY(-8px)}70%,88%{transform:translateY(-3px)}}@keyframes a-glow{0%,100%{opacity:.45;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}@keyframes a-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}@keyframes a-tassel{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg)}}@keyframes a-swim{0%,100%{transform:translate(-14px,2px)}50%{transform:translate(12px,-4px)}}@keyframes a-tail{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.6)}}@keyframes a-bubble{0%{transform:translateY(0);opacity:0}20%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}@keyframes a-twinkle{0%,100%{transform:scale(.5);opacity:.35}50%{transform:scale(1.1);opacity:1}}@keyframes a-lamp{0%,100%{opacity:.35}50%{opacity:1}}@keyframes a-steam{0%{transform:translateY(8px);opacity:0}35%{opacity:.85}100%{transform:translateY(-14px);opacity:0}}@keyframes a-scribble{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}@keyframes a-flame{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.7)}}@keyframes a-draw{0%{stroke-dashoffset:90}70%,100%{stroke-dashoffset:0}}.a-bob{animation:a-bob 2.6s ease-in-out infinite}.a-hover{animation:a-hover 3s ease-in-out infinite}.a-shadow{animation:a-shadow 3s ease-in-out infinite}.a-blink{animation:a-blink 4.2s linear infinite}.a-wave{animation:a-wave 3.2s ease-in-out infinite;transform-origin:0% 100%!important}.a-jiggle{animation:a-jiggle 2.2s ease-in-out infinite;transform-origin:50% 100%!important}.a-pop{animation:a-pop 3.4s cubic-bezier(.3,1.6,.5,1) infinite}.a-glow{animation:a-glow 2.4s ease-in-out infinite}.a-sway{animation:a-sway 3.4s ease-in-out infinite;transform-origin:50% 100%!important}.a-tassel{animation:a-tassel 2.2s ease-in-out infinite;transform-origin:0% 0%!important}.a-swim{animation:a-swim 4.6s ease-in-out infinite}.a-tail{animation:a-tail .7s ease-in-out infinite;transform-origin:100% 50%!important}.a-bubble{animation:a-bubble 2.8s ease-in infinite}.a-twinkle{animation:a-twinkle 1.9s ease-in-out infinite}.a-lamp{animation:a-lamp 1.2s steps(2,jump-none) infinite}.a-steam{animation:a-steam 3s ease-out infinite}.a-scribble{animation:a-scribble 1.6s ease-in-out infinite;transform-origin:50% 100%!important}.a-flame{animation:a-flame .35s ease-in-out infinite;transform-origin:50% 0%!important}.a-draw{stroke-dasharray:90;animation:a-draw 3.2s ease-in-out infinite}.d1{animation-delay:-.6s}.d2{animation-delay:-1.2s}.d3{animation-delay:-1.8s}.mini *,.mini{animation:none!important}@media(prefers-reduced-motion:reduce){.avatar *{animation:none!important}}.cell{background:#000}.cell[data-k=G]{box-shadow:inset 0 0 0 1px #6b6b6b}.cell[data-k=I]{background:#00C8C8}.cell[data-k=O]{background:#E8D000}.cell[data-k=T]{background:#B000D0}.cell[data-k=S]{background:#00B000}.cell[data-k=Z]{background:#D80000}.cell[data-k=J]{background:#0048E0}.cell[data-k=L]{background:#E87800}.cell[data-k=I],.cell[data-k=O],.cell[data-k=T],.cell[data-k=S],.cell[data-k=Z],.cell[data-k=J],.cell[data-k=L]{box-shadow:inset var(--bv) var(--bv) 0 rgba(255,255,255,.55),inset calc(var(--bv) * -1) calc(var(--bv) * -1) 0 rgba(0,0,0,.45)}.next-grid .cell[data-k=""]{background:transparent;box-shadow:none}.next-grid.is-3{transform:translateX(calc(var(--n) / 2))}.t-keys{display:none}@media(min-height:820px)and (min-width:700px){.t-keys{display:block}}</style></head>
+<body class="flex min-h-[100svh] flex-col bg-desk font-system text-black antialiased [font-synthesis:none]">
+  
+  <svg class="pointer-events-none absolute h-0 w-0" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="g-shadow"><stop offset="0" stop-color="#000" stop-opacity=".42"></stop><stop offset="1" stop-color="#000" stop-opacity="0"></stop></radialGradient>
+      <linearGradient id="g-metal" x1="0" x2="1"><stop offset="0" stop-color="#8f98a3"></stop><stop offset=".3" stop-color="#f4f6f8"></stop><stop offset=".6" stop-color="#b8c0c8"></stop><stop offset="1" stop-color="#6f7884"></stop></linearGradient>
+      <linearGradient id="g-chrome" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fbfcfd"></stop><stop offset=".42" stop-color="#c3cad2"></stop><stop offset=".5" stop-color="#8f99a5"></stop><stop offset=".62" stop-color="#dfe4e9"></stop><stop offset="1" stop-color="#7c8692"></stop></linearGradient>
+      <radialGradient id="g-glove" cx=".35" cy=".3"><stop offset="0" stop-color="#fff"></stop><stop offset="1" stop-color="#c9ced6"></stop></radialGradient>
+      <radialGradient id="g-shoe" cx=".35" cy=".3"><stop offset="0" stop-color="#ff8a80"></stop><stop offset="1" stop-color="#b3201a"></stop></radialGradient>
+      <linearGradient id="g-floppy" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#5b7cff"></stop><stop offset=".5" stop-color="#2f49c9"></stop><stop offset="1" stop-color="#16247a"></stop></linearGradient>
+      <linearGradient id="g-jelly-front" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#8ff0a0"></stop><stop offset=".55" stop-color="#34c759"></stop><stop offset="1" stop-color="#128a3a"></stop></linearGradient>
+      <linearGradient id="g-jelly-top" x1="0" x2="1"><stop offset="0" stop-color="#e3ffe0"></stop><stop offset="1" stop-color="#96eea2"></stop></linearGradient>
+      <linearGradient id="g-jelly-side" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1fa046"></stop><stop offset="1" stop-color="#0b6a2b"></stop></linearGradient>
+      <linearGradient id="g-toast" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f6d08a"></stop><stop offset="1" stop-color="#d9a04e"></stop></linearGradient>
+      <radialGradient id="g-bulb" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#fffef0"></stop><stop offset=".45" stop-color="#ffe566"></stop><stop offset="1" stop-color="#f0a800"></stop></radialGradient>
+      <radialGradient id="g-glow"><stop offset="0" stop-color="#fff59d" stop-opacity=".95"></stop><stop offset=".6" stop-color="#ffe066" stop-opacity=".35"></stop><stop offset="1" stop-color="#ffe066" stop-opacity="0"></stop></radialGradient>
+      <linearGradient id="g-hat" x1="0" x2="1"><stop offset="0" stop-color="#111"></stop><stop offset=".35" stop-color="#555"></stop><stop offset=".6" stop-color="#1c1c1c"></stop><stop offset="1" stop-color="#000"></stop></linearGradient>
+      <radialGradient id="g-owl" cx=".38" cy=".3" r=".85"><stop offset="0" stop-color="#c9925a"></stop><stop offset=".6" stop-color="#8a5a2e"></stop><stop offset="1" stop-color="#55351a"></stop></radialGradient>
+      <radialGradient id="g-belly" cx=".4" cy=".3"><stop offset="0" stop-color="#fff3d1"></stop><stop offset="1" stop-color="#e3c088"></stop></radialGradient>
+      <radialGradient id="g-glass" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#ffffff" stop-opacity=".85"></stop><stop offset=".5" stop-color="#d6f0ff" stop-opacity=".45"></stop><stop offset="1" stop-color="#8fc7ea" stop-opacity=".6"></stop></radialGradient>
+      <linearGradient id="g-water" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8fdcff"></stop><stop offset="1" stop-color="#2a86d1"></stop></linearGradient>
+      <radialGradient id="g-fish" cx=".4" cy=".3"><stop offset="0" stop-color="#ffd27a"></stop><stop offset=".6" stop-color="#ff8a1f"></stop><stop offset="1" stop-color="#d9480f"></stop></radialGradient>
+      <linearGradient id="g-pot" x1="0" x2="1"><stop offset="0" stop-color="#a8431f"></stop><stop offset=".35" stop-color="#ef8354"></stop><stop offset="1" stop-color="#8c3415"></stop></linearGradient>
+      <linearGradient id="g-cactus" x1="0" x2="1"><stop offset="0" stop-color="#1f7a35"></stop><stop offset=".35" stop-color="#7ddc8c"></stop><stop offset=".7" stop-color="#2f9e44"></stop><stop offset="1" stop-color="#17602a"></stop></linearGradient>
+      <radialGradient id="g-dome" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".9"></stop><stop offset=".5" stop-color="#bfefff" stop-opacity=".45"></stop><stop offset="1" stop-color="#63c4f0" stop-opacity=".55"></stop></radialGradient>
+      <radialGradient id="g-alien" cx=".38" cy=".3"><stop offset="0" stop-color="#d8ffc7"></stop><stop offset=".6" stop-color="#63d14f"></stop><stop offset="1" stop-color="#2b8a2f"></stop></radialGradient>
+      <linearGradient id="g-saucer" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f4f7fa"></stop><stop offset=".45" stop-color="#aab4c0"></stop><stop offset=".55" stop-color="#7d8896"></stop><stop offset="1" stop-color="#c9d1da"></stop></linearGradient>
+      <linearGradient id="g-beam" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff59d" stop-opacity=".7"></stop><stop offset="1" stop-color="#fff59d" stop-opacity="0"></stop></linearGradient>
+      <linearGradient id="g-mug" x1="0" x2="1"><stop offset="0" stop-color="#c81e1e"></stop><stop offset=".3" stop-color="#ff7b7b"></stop><stop offset=".65" stop-color="#e03131"></stop><stop offset="1" stop-color="#8f0f0f"></stop></linearGradient>
+      <linearGradient id="g-saucer-plate" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffffff"></stop><stop offset="1" stop-color="#c5cad1"></stop></linearGradient>
+      <linearGradient id="g-pencil" x1="0" x2="1"><stop offset="0" stop-color="#d98200"></stop><stop offset=".3" stop-color="#ffd43b"></stop><stop offset=".5" stop-color="#fff3bf"></stop><stop offset=".7" stop-color="#ffc21a"></stop><stop offset="1" stop-color="#c76a00"></stop></linearGradient>
+      <linearGradient id="g-eraser" x1="0" x2="1"><stop offset="0" stop-color="#e05c84"></stop><stop offset=".4" stop-color="#ffb3c7"></stop><stop offset="1" stop-color="#c2416b"></stop></linearGradient>
+      <linearGradient id="g-wood" x1="0" x2="1"><stop offset="0" stop-color="#c99a62"></stop><stop offset=".45" stop-color="#f6dcb4"></stop><stop offset="1" stop-color="#b98650"></stop></linearGradient>
+      <linearGradient id="g-rocket" x1="0" x2="1"><stop offset="0" stop-color="#b4bdc8"></stop><stop offset=".38" stop-color="#ffffff"></stop><stop offset="1" stop-color="#97a2af"></stop></linearGradient>
+      <linearGradient id="g-flame" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff3a0"></stop><stop offset=".45" stop-color="#ff922b"></stop><stop offset="1" stop-color="#e03131" stop-opacity=".2"></stop></linearGradient>
+      <radialGradient id="g-dough" cx=".38" cy=".3" r=".85"><stop offset="0" stop-color="#f8d7a0"></stop><stop offset=".6" stop-color="#dba55a"></stop><stop offset="1" stop-color="#a86f2c"></stop></radialGradient>
+      <linearGradient id="g-icing" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffc2dc"></stop><stop offset=".5" stop-color="#ff7eb6"></stop><stop offset="1" stop-color="#e64990"></stop></linearGradient>
+      <symbol id="stronglify-mark" viewBox="0 0 170 148">
+        <path fill-rule="evenodd" d="M85 5a51 51 0 1 0 0 102a51 51 0 1 0 0-102zm0 24a27 27 0 1 1 0 54a27 27 0 1 1 0-54z" fill="#050506"></path>
+        <path d="M12 103c24 0 43 35 73 35s49-35 73-35v23c-20 0-42 22-73 22s-53-22-73-22z" fill="#050506"></path>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main class="relative flex flex-1 flex-col items-center justify-center gap-4 px-[10px] py-4 min-[700px]:py-6">
+
+    
+    <ul class="flex w-full justify-center gap-1 text-center text-[17px] leading-[1.05] text-white min-[700px]:absolute min-[700px]:left-5 min-[700px]:top-5 min-[700px]:w-[104px] min-[700px]:flex-col min-[700px]:gap-7 min-[700px]:text-[20px]">
+      <li class="w-[88px] min-[700px]:w-auto">
+        <button type="button" class="desk-icon flex w-full flex-col items-center gap-1.5 focus:outline-none" data-open="changer">
+          <span class="raised block h-12 w-12 p-[5px] min-[700px]:h-16 min-[700px]:w-16 min-[700px]:p-[6px]">
+            <span id="desk-avatar" class="block h-full w-full bg-white"></span>
+          </span>
+          <span class="icon-label px-[2px]">My Avatar:<br/><span id="desk-name">Cosmo</span></span>
+        </button>
+      </li>
+      <li class="w-[88px] min-[700px]:w-auto">
+        <button type="button" class="desk-icon flex w-full flex-col items-center gap-1.5 focus:outline-none" data-open="tetris">
+          <svg class="h-12 w-12 min-[700px]:h-16 min-[700px]:w-16" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><path d="M4 0h4v4h-4z" fill="#b000d0"></path><path d="M4 0h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M7 1h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M0 4h4v4h-4z" fill="#b000d0"></path><path d="M0 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M3 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M4 4h4v4h-4z" fill="#b000d0"></path><path d="M4 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M7 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M8 4h4v4h-4z" fill="#b000d0"></path><path d="M8 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M11 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M0 8h4v4h-4z" fill="#0048e0"></path><path d="M0 8h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M3 9h1v3h-3v-1h2z" fill="#002070"></path><path d="M0 12h4v4h-4z" fill="#0048e0"></path><path d="M0 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M3 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M4 12h4v4h-4z" fill="#0048e0"></path><path d="M4 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M7 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M8 12h4v4h-4z" fill="#0048e0"></path><path d="M8 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M11 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M12 4h4v4h-4z" fill="#e8d000"></path><path d="M12 4h4v1h-3v3h-1z" fill="#fff39a"></path><path d="M15 5h1v3h-3v-1h2z" fill="#7a6c00"></path><path d="M12 8h4v4h-4z" fill="#e8d000"></path><path d="M12 8h4v1h-3v3h-1z" fill="#fff39a"></path><path d="M15 9h1v3h-3v-1h2z" fill="#7a6c00"></path><path d="M8 8h4v4h-4z" fill="#d80000"></path><path d="M8 8h4v1h-3v3h-1z" fill="#ff8a8a"></path><path d="M11 9h1v3h-3v-1h2z" fill="#6a0000"></path><path d="M12 12h4v4h-4z" fill="#d80000"></path><path d="M12 12h4v1h-3v3h-1z" fill="#ff8a8a"></path><path d="M15 13h1v3h-3v-1h2z" fill="#6a0000"></path></svg>
+          <span class="icon-label px-[2px]">Tetris</span>
+        </button>
+      </li>
+      <li class="flex w-[88px] flex-col items-center gap-1.5 min-[700px]:w-auto" aria-hidden="true">
+        <svg class="h-12 w-12 min-[700px]:h-16 min-[700px]:w-16" viewBox="0 0 32 32" shape-rendering="crispEdges">
+          <path d="M4 12h24v15H4z" fill="#8a5a2e"></path><path d="M4 12c0-5 4-7 8-7h8c4 0 8 2 8 7z" fill="#b07a3f"></path><path d="M4 12h24v2H4z" fill="#55351a"></path><path d="M9 5h3v22H9zm11 0h3v22h-3z" fill="#e0b040"></path><path d="M14 13h4v5h-4z" fill="#ffd43b"></path><path d="M15 15h2v2h-2z" fill="#222"></path><path d="M4 27h24v1H4z" fill="#000" opacity=".4"></path>
+        </svg>
+        <span class="icon-label w-min px-[2px]">Costume Trunk</span>
+      </li>
+      <li class="w-[88px] min-[700px]:w-auto">
+        <button type="button" class="desk-icon flex w-full flex-col items-center gap-1.5 focus:outline-none" data-open="mirror">
+<svg class="h-12 w-12 min-[700px]:h-16 min-[700px]:w-16" viewBox="0 0 32 32">
+          <rect x="14" y="19" width="4" height="11" rx="2" fill="#b07a3f"></rect><ellipse cx="16" cy="12" rx="10" ry="11" fill="#e0b040"></ellipse><ellipse cx="16" cy="12" rx="7.5" ry="8.5" fill="#cfeaff"></ellipse><path d="M11 9l5-3M12 13l7-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+          <span class="icon-label w-min px-[2px]">Magic Mirror</span>
+        </button>
+      </li>
+    </ul>
+
+    
+    <section class="raised-win p-[calc(var(--s)*4)] text-[length:var(--fs)] leading-none w-[var(--win-w)]" role="dialog" aria-labelledby="win-title" id="changer">
+      <header class="flex h-[var(--title-h)] items-center gap-[calc(var(--s)*5)] bg-[linear-gradient(90deg,#0A246A_0%,#3C6EC0_55%,#A6CAF0_100%)] pl-[calc(var(--s)*3)] pr-[calc(var(--s)*2)] text-white">
+        <svg class="h-[calc(var(--title-h)*.8)] w-[calc(var(--title-h)*.8)] shrink-0" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges">
+          <path d="M1 2h14v11H1z" fill="#d4d0c8"></path><path d="M2 3h12v9H2z" fill="#0a7f8a"></path><path d="M5 14h6v1H5z" fill="#404040"></path>
+          <path d="M6 5h4v1h1v4h-1v1H6v-1H5V6h1z" fill="#ffd43b"></path><path d="M6 7h1v1H6zm3 0h1v1H9zM7 9h2v1H7z" fill="#222"></path>
+        </svg>
+        <h1 id="win-title" class="grow truncate tracking-[.02em]">Avatar Changer</h1>
+        <button type="button" id="close" class="btn raised flex h-[calc(var(--title-h)*.78)] w-[calc(var(--title-h)*.9)] shrink-0 items-center justify-center" aria-label="Close without changing the default avatar">
+          <svg class="btn-in h-[60%] w-[50%]" viewBox="0 0 8 7" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H5v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1V5h1V4h1V3H2V2H1V1H0z" fill="#000"></path></svg>
+        </button>
+      </header>
+
+      <div class="grid grid-cols-[var(--list-w)_minmax(0,1fr)] grid-rows-[var(--head-h)_var(--pane-h)_auto] gap-x-[var(--gap)] px-[10px] pb-[12px] pt-[14px] min-[700px]:pb-[calc(var(--s)*18)] min-[700px]:pl-[calc(var(--s)*12)] min-[700px]:pr-[calc(var(--s)*13)] min-[700px]:pt-[calc(var(--s)*21)]">
+        <div class="raised col-start-1 row-start-1 flex items-center justify-center" id="list-label">Avatars</div>
+
+        <div class="sunken col-start-1 row-start-2 flex min-h-0 bg-white">
+          <ul id="names" class="names relative min-w-0 grow overflow-y-auto overscroll-contain focus:outline-none" role="listbox" tabindex="0" aria-labelledby="list-label" aria-activedescendant="opt-cosmo">
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-floppy" data-avatar="floppy" aria-selected="false">Floppy Fred</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-jelly" data-avatar="jelly" aria-selected="false">Jelly Cube</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-toasty" data-avatar="toasty" aria-selected="false">Toasty</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-bulb" data-avatar="bulb" aria-selected="false">Sir Bulb</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-hoot" data-avatar="hoot" aria-selected="false">Prof. Hoot</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-goldie" data-avatar="goldie" aria-selected="false">Goldie</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-cactus" data-avatar="cactus" aria-selected="false">Cactus Carl</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-stronglify" data-avatar="stronglify" aria-selected="false">Stronglify</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-cosmo" data-avatar="cosmo" aria-selected="true">Cosmo</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-mug" data-avatar="mug" aria-selected="false">Mug Morgan</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-pencil" data-avatar="pencil" aria-selected="false">Pencil Pat</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-rocket" data-avatar="rocket" aria-selected="false">Rocket Rita</li>
+            <li class="name flex h-[var(--row)] cursor-default items-center truncate px-[calc(var(--s)*3)]" role="option" id="opt-donut" data-avatar="donut" aria-selected="false">Dizzy Donut</li>
+          </ul>
+          <div class="flex w-[var(--sb-w)] shrink-0 flex-col">
+            <button type="button" id="prev" class="btn raised flex h-[var(--sb-w)] shrink-0 items-center justify-center" aria-label="Previous avatar">
+              <svg class="btn-in h-[45%] w-[45%]" viewBox="0 0 7 4" aria-hidden="true" shape-rendering="crispEdges"><path d="M3 0h1v1h1v1h1v1h1v1H0V3h1V2h1V1h1z" fill="#000"></path></svg>
+            </button>
+            <div id="track" class="dither relative grow">
+              <div id="thumb" class="raised absolute inset-x-0 top-0 touch-none"></div>
+            </div>
+            <button type="button" id="next" class="btn raised flex h-[var(--sb-w)] shrink-0 items-center justify-center" aria-label="Next avatar">
+              <svg class="btn-in h-[45%] w-[45%]" viewBox="0 0 7 4" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h7v1H6v1H5v1H4v1H3V3H2V2H1V1H0z" fill="#000"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="sunken col-start-2 row-start-2 flex items-center justify-center overflow-hidden bg-face" id="pane" role="img" aria-label="Preview: Cosmo">
+          <svg class="avatar" data-avatar="floppy" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="100" cy="184" rx="54" ry="9" fill="url(#g-shadow)"></ellipse>
+            <g class="a-bob">
+              <rect x="80" y="148" width="7" height="24" fill="#1c1c1c"></rect><rect x="113" y="148" width="7" height="24" fill="#1c1c1c"></rect>
+              <ellipse cx="78" cy="176" rx="15" ry="7.5" fill="url(#g-shoe)"></ellipse><ellipse cx="122" cy="176" rx="15" ry="7.5" fill="url(#g-shoe)"></ellipse>
+              <path d="M46 96q-14 6-20 22" fill="none" stroke="#1c1c1c" stroke-width="5" stroke-linecap="round"></path><circle cx="25" cy="121" r="9" fill="url(#g-glove)"></circle>
+              <g class="a-wave"><path d="M154 100q16-8 22-28" fill="none" stroke="#1c1c1c" stroke-width="5" stroke-linecap="round"></path><circle cx="177" cy="68" r="10" fill="url(#g-glove)"></circle></g>
+              <path d="M50 30h90l16 16v100a6 6 0 0 1-6 6H50a6 6 0 0 1-6-6V36a6 6 0 0 1 6-6z" fill="url(#g-floppy)"></path>
+              <path d="M47 148V36a3 3 0 0 1 3-3h88" fill="none" stroke="#9db1ff" stroke-width="2" opacity=".8"></path>
+              <rect x="68" y="30" width="64" height="40" rx="2" fill="url(#g-metal)"></rect><rect x="108" y="36" width="15" height="28" rx="2" fill="#1b2a7a"></rect>
+              <rect x="56" y="80" width="88" height="72" rx="3" fill="#fbfaf2"></rect><rect x="56" y="80" width="88" height="11" rx="3" fill="#e8504a"></rect><rect x="56" y="86" width="88" height="5" fill="#e8504a"></rect>
+              <g class="a-blink"><ellipse cx="86" cy="112" rx="8.5" ry="10.5" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"></ellipse><circle cx="87.5" cy="114" r="4.6" fill="#111"></circle><circle cx="86" cy="112" r="1.6" fill="#fff"></circle></g>
+              <g class="a-blink"><ellipse cx="114" cy="112" rx="8.5" ry="10.5" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"></ellipse><circle cx="115.5" cy="114" r="4.6" fill="#111"></circle><circle cx="114" cy="112" r="1.6" fill="#fff"></circle></g>
+              <path d="M84 131q16 14 32 0" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"></path>
+              <circle cx="74" cy="128" r="5" fill="#ff9aa2" opacity=".7"></circle><circle cx="126" cy="128" r="5" fill="#ff9aa2" opacity=".7"></circle>
+            </g>
+          </svg>
+
+          <svg class="avatar" data-avatar="jelly" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="104" cy="182" rx="58" ry="10" fill="url(#g-shadow)"></ellipse>
+            <g class="a-jiggle">
+              <path d="M142 78l24-24v92l-24 28z" fill="url(#g-jelly-side)" stroke="#0b6a2b" stroke-width="6" stroke-linejoin="round"></path>
+              <path d="M46 78l24-24h96l-24 24z" fill="url(#g-jelly-top)" stroke="#96eea2" stroke-width="6" stroke-linejoin="round"></path>
+              <rect x="43" y="75" width="102" height="102" rx="14" fill="url(#g-jelly-front)"></rect>
+              <circle cx="66" cy="150" r="6" fill="#d7ffd9" opacity=".45"></circle><circle cx="124" cy="158" r="4" fill="#d7ffd9" opacity=".45"></circle><circle cx="130" cy="96" r="5" fill="#d7ffd9" opacity=".35"></circle>
+              <rect x="54" y="84" width="34" height="12" rx="6" fill="#fff" opacity=".65" transform="rotate(-12 71 90)"></rect>
+              <path d="M78 62h60" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"></path>
+              <g class="a-blink"><ellipse cx="78" cy="118" rx="9" ry="11" fill="#fff" stroke="#0b4a20" stroke-width="1.5"></ellipse><circle cx="79.5" cy="120" r="5" fill="#111"></circle><circle cx="78" cy="118" r="1.7" fill="#fff"></circle></g>
+              <g class="a-blink"><ellipse cx="110" cy="118" rx="9" ry="11" fill="#fff" stroke="#0b4a20" stroke-width="1.5"></ellipse><circle cx="111.5" cy="120" r="5" fill="#111"></circle><circle cx="110" cy="118" r="1.7" fill="#fff"></circle></g>
+              <path d="M82 142q12 12 24 0z" fill="#0b4a20"></path><path d="M88 147q6 4 12 0" fill="#ff8fa3"></path>
+            </g>
+          </svg>
+
+          <svg class="avatar" data-avatar="toasty" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="100" cy="184" rx="62" ry="9" fill="url(#g-shadow)"></ellipse>
+            <g class="a-pop"><path d="M58 96V54q0-6-4-9q2-11 22-11t22 11q-4 3-4 9v42z" fill="url(#g-toast)" stroke="#a8691f" stroke-width="3"></path><path d="M68 52h16M66 62h20" stroke="#c98a3c" stroke-width="2" stroke-linecap="round"></path></g>
+            <g class="a-pop d1"><path d="M106 96V54q0-6-4-9q2-11 22-11t22 11q-4 3-4 9v42z" fill="url(#g-toast)" stroke="#a8691f" stroke-width="3"></path><path d="M116 52h16M114 62h20" stroke="#c98a3c" stroke-width="2" stroke-linecap="round"></path></g>
+            <rect x="46" y="166" width="14" height="10" rx="3" fill="#2b2b2b"></rect><rect x="140" y="166" width="14" height="10" rx="3" fill="#2b2b2b"></rect>
+            <rect x="164" y="98" width="9" height="40" rx="3" fill="#3a3a3a"></rect><rect x="161" y="104" width="18" height="12" rx="4" fill="#e03131"></rect><rect x="163" y="106" width="8" height="3" rx="1.5" fill="#ff9c9c"></rect>
+            <rect x="34" y="74" width="132" height="94" rx="22" fill="url(#g-chrome)"></rect>
+            <rect x="34" y="150" width="132" height="18" rx="9" fill="#3a3f47"></rect>
+            <rect x="54" y="72" width="44" height="9" rx="4.5" fill="#22262b"></rect><rect x="102" y="72" width="44" height="9" rx="4.5" fill="#22262b"></rect>
+            <path d="M44 100q2-18 20-20" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"></path>
+            <g class="a-blink"><ellipse cx="82" cy="112" rx="9" ry="11" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"></ellipse><circle cx="83.5" cy="114" r="5" fill="#111"></circle><circle cx="82" cy="112" r="1.7" fill="#fff"></circle></g>
+            <g class="a-blink"><ellipse cx="118" cy="112" rx="9" ry="11" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"></ellipse><circle cx="119.5" cy="114" r="5" fill="#111"></circle><circle cx="118" cy="112" r="1.7" fill="#fff"></circle></g>
+            <path d="M86 132q14 12 28 0" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"></path>
+            <circle cx="68" cy="130" r="6" fill="#ff8fa3" opacity=".6"></circle><circle cx="132" cy="130" r="6" fill="#ff8fa3" opacity=".6"></circle>
+            <circle cx="148" cy="159" r="4.5" fill="#ffd43b"></circle>
+          </svg>
+
+          <svg class="avatar" data-avatar="bulb" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="100" cy="186" rx="40" ry="8" fill="url(#g-shadow)"></ellipse>
+            <circle class="a-glow" cx="100" cy="94" r="78" fill="url(#g-glow)"></circle>
+            <g class="a-bob">
+              <path d="M100 44c-38 0-52 28-52 50c0 22 16 32 22 48h60c6-16 22-26 22-48c0-22-14-50-52-50z" fill="url(#g-bulb)" stroke="#d89b00" stroke-width="1.5"></path>
+              <ellipse cx="72" cy="74" rx="9" ry="17" fill="#fff" opacity=".75" transform="rotate(28 72 74)"></ellipse>
+              <rect x="70" y="142" width="60" height="10" rx="4" fill="url(#g-metal)"></rect><rect x="72" y="152" width="56" height="10" rx="4" fill="url(#g-metal)"></rect><rect x="74" y="162" width="52" height="10" rx="4" fill="url(#g-metal)"></rect>
+              <path d="M82 172h36l-8 10H90z" fill="#2b2b2b"></path>
+              <g transform="rotate(-9 100 50)">
+                <path d="M76 48V18a24 5 0 0 1 48 0v30z" fill="url(#g-hat)"></path><ellipse cx="100" cy="18" rx="24" ry="5" fill="#3a3a3a"></ellipse>
+                <rect x="76" y="37" width="48" height="9" fill="#c81e1e"></rect><ellipse cx="100" cy="49" rx="38" ry="7.5" fill="url(#g-hat)"></ellipse>
+              </g>
+              <g class="a-blink"><ellipse cx="84" cy="92" rx="8" ry="10" fill="#fff" stroke="#3d2a00" stroke-width="1.5"></ellipse><circle cx="85.5" cy="94" r="4.5" fill="#111"></circle><circle cx="84" cy="92" r="1.6" fill="#fff"></circle></g>
+              <g class="a-blink"><ellipse cx="116" cy="92" rx="8" ry="10" fill="#fff" stroke="#3d2a00" stroke-width="1.5"></ellipse><circle cx="117.5" cy="94" r="4.5" fill="#111"></circle><circle cx="116" cy="92" r="1.6" fill="#fff"></circle></g>
+              <circle cx="116" cy="92" r="14.5" fill="#fff" fill-opacity=".18" stroke="#c9981a" stroke-width="3"></circle>
+              <path d="M128 100q12 12 8 34" fill="none" stroke="#c9981a" stroke-width="1.8" stroke-dasharray="3 2"></path>
+              <path d="M100 112c-6-7-19-5-25 4c8 3 19 2 25-2c6 4 17 5 25 2c-6-9-19-11-25-4z" fill="#5b3a1e"></path>
+              <path d="M92 124q8 5 16 0" fill="none" stroke="#3d2a00" stroke-width="2.5" stroke-linecap="round"></path>
+            </g>
+          </svg>
+
+          <svg class="avatar" data-avatar="hoot" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="100" cy="184" rx="52" ry="9" fill="url(#g-shadow)"></ellipse>
+            <g class="a-sway">
+              <path d="M82 170l-10 9m10-9v10m0-10l10 9M118 170l-10 9m10-9v10m0-10l10 9" stroke="#f08c00" stroke-width="5" stroke-linecap="round"></path>
+              <path d="M60 64l-6-24l26 14zM140 64l6-24l-26 14z" fill="#6b4420"></path>
+              <ellipse cx="100" cy="114" rx="52" ry="60" fill="url(#g-owl)"></ellipse>
+              <ellipse cx="50" cy="122" rx="13" ry="36" fill="#5a3819" transform="rotate(8 50 122)"></ellipse><ellipse cx="150" cy="122" rx="13" ry="36" fill="#5a3819" transform="rotate(-8 150 122)"></ellipse>
+              <ellipse cx="100" cy="134" rx="32" ry="36" fill="url(#g-belly)"></ellipse>
+              <path d="M86 128l5 5l5-5M104 128l5 5l5-5M95 144l5 5l5-5M86 158l5 5l5-5M104 158l5 5l5-5" fill="none" stroke="#c79a5b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="80" cy="94" r="21" fill="#fff8e6"></circle><circle cx="120" cy="94" r="21" fill="#fff8e6"></circle>
+              <g class="a-blink"><circle cx="82" cy="96" r="10" fill="#111"></circle><circle cx="78.5" cy="92" r="3.2" fill="#fff"></circle></g>
+              <g class="a-blink"><circle cx="118" cy="96" r="10" fill="#111"></circle><circle cx="114.5" cy="92" r="3.2" fill="#fff"></circle></g>
+              <circle cx="80" cy="94" r="22.5" fill="none" stroke="#1c1c1c" stroke-width="3.5"></circle><circle cx="120" cy="94" r="22.5" fill="none" stroke="#1c1c1c" stroke-width="3.5"></circle>
+              <path d="M100 104l-8 5l8 13l8-13z" fill="#f59f00" stroke="#c77700" stroke-width="1"></path>
+              <path d="M72 56v12q28 12 56 0V56z" fill="#1c1c1c"></path>
+              <path d="M100 30l56 18l-56 18l-56-18z" fill="#2b2b2b"></path><path d="M100 30l56 18l-56 6l-56-6z" fill="#4a4a4a"></path>
+              <circle cx="100" cy="48" r="4" fill="#ffd43b"></circle>
+              <g class="a-tassel"><path d="M100 48q26 2 44 4v20" fill="none" stroke="#ffd43b" stroke-width="3" stroke-linecap="round"></path><path d="M139 70h10l2 16h-14z" fill="#ffd43b"></path></g>
+            </g>
+          </svg>
+
+          <svg class="avatar" data-avatar="goldie" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="100" cy="184" rx="56" ry="9" fill="url(#g-shadow)"></ellipse>
+            <path d="M54.7 56A66 66 0 1 0 145.3 56z" fill="url(#g-glass)"></path>
+            <path d="M41.2 74A66 66 0 1 0 158.8 74z" fill="url(#g-water)" opacity=".88"></path>
+            <ellipse cx="100" cy="74" rx="58.5" ry="8" fill="#c9efff"></ellipse>
+            <path d="M68 163a66 66 0 0 0 64 0q-32-12-64 0z" fill="#e8c98a"></path><circle cx="84" cy="160" r="3" fill="#c9a25e"></circle><circle cx="112" cy="162" r="3.5" fill="#f6dfb0"></circle><circle cx="99" cy="158" r="2.5" fill="#c9a25e"></circle>
+            <path d="M132 160q-8-16 0-30q8-12 0-26" fill="none" stroke="#2f9e44" stroke-width="5" stroke-linecap="round"></path><path d="M142 158q6-12 0-24" fill="none" stroke="#51cf66" stroke-width="4" stroke-linecap="round"></path>
+            <circle class="a-bubble" cx="74" cy="110" r="3.5" fill="none" stroke="#fff" stroke-width="1.5"></circle><circle class="a-bubble d1" cx="82" cy="124" r="2.5" fill="none" stroke="#fff" stroke-width="1.5"></circle><circle class="a-bubble d2" cx="68" cy="130" r="2" fill="none" stroke="#fff" stroke-width="1.5"></circle>
+            <g class="a-swim">
+              <path class="a-tail" d="M84 118l-24-15q6 15 0 30z" fill="#ff922b"></path>
+              <path d="M98 104q8-12 18-6l-6 10z" fill="#ff922b"></path>
+              <ellipse cx="104" cy="118" rx="24" ry="16" fill="url(#g-fish)"></ellipse>
+              <path d="M98 122q-8 6-2 12q8-2 10-10z" fill="#ffb347"></path>
+              <g class="a-blink"><circle cx="114" cy="113" r="6.5" fill="#fff" stroke="#7a2e00" stroke-width="1.2"></circle><circle cx="115.5" cy="113.5" r="3.4" fill="#111"></circle><circle cx="114.5" cy="112" r="1.2" fill="#fff"></circle></g>
+              <path d="M118 124q5 2 8-2" fill="none" stroke="#7a2e00" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+            <ellipse cx="100" cy="56" rx="45.3" ry="7.5" fill="#e9f7ff" fill-opacity=".55" stroke="#e6f6ff" stroke-width="4"></ellipse>
+            <ellipse cx="62" cy="100" rx="8" ry="22" fill="#fff" opacity=".5" transform="rotate(22 62 100)"></ellipse><circle cx="140" cy="150" r="5" fill="#fff" opacity=".35"></circle>
+          </svg>
+
+          <svg class="avatar" data-avatar="cactus" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="100" cy="184" rx="50" ry="9" fill="url(#g-shadow)"></ellipse>
+            <g class="a-sway">
+              <path d="M82 106H60V82" fill="none" stroke="#1f7a35" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"></path><path d="M80 104H61V82" fill="none" stroke="#5fce72" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M118 96h24V66" fill="none" stroke="#1f7a35" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"></path><path d="M120 94h19V66" fill="none" stroke="#3fb555" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+              <rect x="78" y="34" width="44" height="106" rx="22" fill="url(#g-cactus)"></rect>
+              <path d="M88 46l-5-3M112 46l5-3M86 126l-5 2M114 126l5 2M100 40v-5M60 72l-5-4M142 58l5-4" stroke="#f1fff1" stroke-width="2" stroke-linecap="round"></path>
+              <g transform="translate(100 32)"><circle cx="0" cy="-8" r="7" fill="#ff6fa5"></circle><circle cx="8" cy="-2" r="7" fill="#ff8fb8"></circle><circle cx="-8" cy="-2" r="7" fill="#ff8fb8"></circle><circle cx="5" cy="6" r="7" fill="#ff6fa5"></circle><circle cx="-5" cy="6" r="7" fill="#ff6fa5"></circle><circle cx="0" cy="0" r="5" fill="#ffd43b"></circle></g>
+              <path d="M80 74h40" stroke="#111" stroke-width="3"></path><rect x="82" y="70" width="16" height="12" rx="5" fill="#111"></rect><rect x="102" y="70" width="16" height="12" rx="5" fill="#111"></rect>
+              <path d="M85 73l5 0M105 73l5 0" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".8"></path>
+              <path d="M90 96q10 9 20 0" fill="none" stroke="#0d3d18" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+            <path d="M64 136h72l-9 42H73z" fill="url(#g-pot)"></path><rect x="58" y="126" width="84" height="14" rx="4" fill="url(#g-pot)"></rect><rect x="62" y="129" width="30" height="3" rx="1.5" fill="#ffc7a8" opacity=".8"></rect>
+          </svg>
+
+          <svg class="avatar" data-avatar="stronglify" viewBox="0 0 200 200" hidden="">
+            <use href="#stronglify-mark" x="12" y="14" width="176" height="172"></use>
+          </svg>
+
+          <svg class="avatar" data-avatar="cosmo" viewBox="0 0 200 200">
+            <ellipse class="a-shadow" cx="100" cy="186" rx="46" ry="8" fill="url(#g-shadow)"></ellipse>
+            <path class="a-twinkle" d="M30 40l3 9l9 3l-9 3l-3 9l-3-9l-9-3l9-3z" fill="#ffd43b"></path>
+            <path class="a-twinkle d1" d="M168 30l2.5 7l7 2.5l-7 2.5l-2.5 7l-2.5-7l-7-2.5l7-2.5z" fill="#fff3a0"></path>
+            <path class="a-twinkle d2" d="M176 96l2 6l6 2l-6 2l-2 6l-2-6l-6-2l6-2z" fill="#ffd43b"></path>
+            <path class="a-twinkle d3" d="M20 110l2 6l6 2l-6 2l-2 6l-2-6l-6-2l6-2z" fill="#fff3a0"></path>
+            <g class="a-hover">
+              <path d="M78 126h44l22 54H56z" fill="url(#g-beam)"></path>
+              <path d="M88 60q-8-14-16-18M112 60q8-14 16-18" fill="none" stroke="#2b8a2f" stroke-width="3" stroke-linecap="round"></path><circle cx="71" cy="41" r="5" fill="url(#g-alien)"></circle><circle cx="129" cy="41" r="5" fill="url(#g-alien)"></circle>
+              <path d="M76 104q-2-48 24-48t24 48z" fill="url(#g-alien)"></path>
+              <g class="a-blink"><ellipse cx="89" cy="80" rx="8" ry="11" fill="#0d0d1a" transform="rotate(18 89 80)"></ellipse><circle cx="86.5" cy="76" r="2.6" fill="#fff"></circle></g>
+              <g class="a-blink"><ellipse cx="111" cy="80" rx="8" ry="11" fill="#0d0d1a" transform="rotate(-18 111 80)"></ellipse><circle cx="108.5" cy="76" r="2.6" fill="#fff"></circle></g>
+              <path d="M93 96q7 6 14 0" fill="none" stroke="#14501a" stroke-width="2.5" stroke-linecap="round"></path>
+              <path d="M62 106q0-58 38-58t38 58z" fill="url(#g-dome)" stroke="#e6f8ff" stroke-width="1.5"></path>
+              <path d="M72 86q4-22 20-28" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"></path>
+              <ellipse cx="100" cy="124" rx="42" ry="11" fill="#5d6876"></ellipse>
+              <ellipse cx="100" cy="112" rx="76" ry="19" fill="url(#g-saucer)"></ellipse>
+              <ellipse cx="100" cy="105" rx="42" ry="9" fill="#eef2f6"></ellipse><ellipse cx="100" cy="106" rx="38" ry="6.5" fill="#8fd3f4" opacity=".55"></ellipse>
+              <circle class="a-lamp" cx="36" cy="113" r="4.5" fill="#ffd43b"></circle><circle class="a-lamp d1" cx="62" cy="123" r="4.5" fill="#ff6b6b"></circle><circle class="a-lamp" cx="100" cy="127" r="4.5" fill="#ffd43b"></circle><circle class="a-lamp d1" cx="138" cy="123" r="4.5" fill="#ff6b6b"></circle><circle class="a-lamp" cx="164" cy="113" r="4.5" fill="#ffd43b"></circle>
+            </g>
+          </svg>
+
+          <svg class="avatar" data-avatar="mug" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="98" cy="184" rx="66" ry="9" fill="url(#g-shadow)"></ellipse>
+            <ellipse cx="96" cy="170" rx="66" ry="11" fill="url(#g-saucer-plate)"></ellipse><ellipse cx="96" cy="168" rx="40" ry="5" fill="#b9bfc7" opacity=".6"></ellipse>
+            <path class="a-steam" d="M76 54q-8-8 0-16t0-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"></path>
+            <path class="a-steam d1" d="M96 50q-8-8 0-16t0-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"></path>
+            <path class="a-steam d2" d="M116 54q-8-8 0-16t0-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"></path>
+            <g class="a-bob">
+              <path d="M140 92h8a19 19 0 0 1 0 38h-8" fill="none" stroke="#b01717" stroke-width="13" stroke-linecap="round"></path><path d="M140 92h8a19 19 0 0 1 0 38h-8" fill="none" stroke="#ff7b7b" stroke-width="4" stroke-linecap="round" opacity=".7"></path>
+              <path d="M50 72h92v70a24 24 0 0 1-24 24H74a24 24 0 0 1-24-24z" fill="url(#g-mug)"></path>
+              <ellipse cx="96" cy="72" rx="46" ry="11" fill="#fff5ee"></ellipse><ellipse cx="96" cy="73" rx="39" ry="8" fill="#4a2c17"></ellipse><ellipse cx="86" cy="71" rx="14" ry="3" fill="#8a5a36" opacity=".8"></ellipse>
+              <rect x="58" y="88" width="8" height="58" rx="4" fill="#fff" opacity=".4"></rect>
+              <g class="a-blink"><ellipse cx="82" cy="110" rx="8.5" ry="10.5" fill="#fff" stroke="#4d0a0a" stroke-width="1.5"></ellipse><circle cx="83.5" cy="112" r="4.6" fill="#111"></circle><circle cx="82" cy="110" r="1.6" fill="#fff"></circle></g>
+              <g class="a-blink"><ellipse cx="112" cy="110" rx="8.5" ry="10.5" fill="#fff" stroke="#4d0a0a" stroke-width="1.5"></ellipse><circle cx="113.5" cy="112" r="4.6" fill="#111"></circle><circle cx="112" cy="110" r="1.6" fill="#fff"></circle></g>
+              <path d="M84 130q13 12 26 0" fill="none" stroke="#4d0a0a" stroke-width="3" stroke-linecap="round"></path>
+              <circle cx="70" cy="128" r="5.5" fill="#ffc9c9" opacity=".65"></circle><circle cx="124" cy="128" r="5.5" fill="#ffc9c9" opacity=".65"></circle>
+            </g>
+          </svg>
+
+          <svg class="avatar" data-avatar="pencil" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="100" cy="186" rx="44" ry="7" fill="url(#g-shadow)"></ellipse>
+            <path class="a-draw" d="M94 181q10-9 18 0t18 0t18 0t14-4" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"></path>
+            <g transform="rotate(12 96 180)"><g class="a-scribble">
+              <rect x="76" y="14" width="40" height="24" rx="10" fill="url(#g-eraser)"></rect>
+              <rect x="76" y="32" width="40" height="18" fill="url(#g-metal)"></rect><path d="M76 37h40M76 43h40" stroke="#6f7884" stroke-width="1.5"></path>
+              <rect x="76" y="50" width="40" height="92" fill="url(#g-pencil)"></rect>
+              <path d="M76 142h40l-20 38z" fill="url(#g-wood)"></path><path d="M89.5 167.6h13L96 180z" fill="#2b2b2b"></path>
+              <path d="M76 142q5 5 10 0t10 0t10 0t10 0" fill="none" stroke="#c76a00" stroke-width="1.5"></path>
+              <g class="a-blink"><ellipse cx="87" cy="82" rx="6.5" ry="8.5" fill="#fff" stroke="#5c3b00" stroke-width="1.4"></ellipse><circle cx="88" cy="83.5" r="3.6" fill="#111"></circle><circle cx="87" cy="82" r="1.3" fill="#fff"></circle></g>
+              <g class="a-blink"><ellipse cx="105" cy="82" rx="6.5" ry="8.5" fill="#fff" stroke="#5c3b00" stroke-width="1.4"></ellipse><circle cx="106" cy="83.5" r="3.6" fill="#111"></circle><circle cx="105" cy="82" r="1.3" fill="#fff"></circle></g>
+              <path d="M88 99q8 8 16 0" fill="none" stroke="#5c3b00" stroke-width="2.6" stroke-linecap="round"></path>
+              <path d="M76 108q-14 6-16 20" fill="none" stroke="#1c1c1c" stroke-width="4" stroke-linecap="round"></path><circle cx="60" cy="130" r="7" fill="url(#g-glove)"></circle>
+              <path d="M116 108q14 4 18 16" fill="none" stroke="#1c1c1c" stroke-width="4" stroke-linecap="round"></path><circle cx="135" cy="126" r="7" fill="url(#g-glove)"></circle>
+            </g></g>
+          </svg>
+
+          <svg class="avatar" data-avatar="rocket" viewBox="0 0 200 200" hidden="">
+            <ellipse class="a-shadow" cx="100" cy="188" rx="40" ry="7" fill="url(#g-shadow)"></ellipse>
+            <g class="a-hover">
+              <g class="a-flame"><path d="M82 140q18 62 36 0z" fill="url(#g-flame)"></path><path d="M91 140q9 34 18 0z" fill="#fff8d0"></path></g>
+              <path d="M76 92l-28 44l26-8zM124 92l28 44l-26-8z" fill="url(#g-mug)"></path>
+              <path d="M100 14c24 22 32 60 26 118H74c-6-58 2-96 26-118z" fill="url(#g-rocket)"></path>
+              <path d="M100 14c12 11 20 26 24 44H76c4-18 12-33 24-44z" fill="url(#g-mug)"></path>
+              <rect x="74" y="118" width="52" height="8" fill="#e03131"></rect>
+              <path d="M82 132h36l6 12H76z" fill="#4a515b"></path>
+              <path d="M100 100v36" stroke="#c81e1e" stroke-width="7" stroke-linecap="round"></path>
+              <circle cx="100" cy="84" r="21" fill="url(#g-metal)"></circle><circle cx="100" cy="84" r="16" fill="#bfe9ff"></circle>
+              <g class="a-blink"><circle cx="93" cy="82" r="3.4" fill="#111"></circle><circle cx="107" cy="82" r="3.4" fill="#111"></circle></g>
+              <path d="M93 90q7 6 14 0" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round"></path>
+              <path d="M88 76q4-7 12-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"></path>
+              <path d="M86 40q4-10 10-16" fill="none" stroke="#ffc9c9" stroke-width="4" stroke-linecap="round" opacity=".8"></path>
+            </g>
+          </svg>
+
+          <svg class="avatar" data-avatar="donut" viewBox="0 0 200 200" hidden="">
+            <ellipse cx="100" cy="182" rx="60" ry="9" fill="url(#g-shadow)"></ellipse>
+            <g class="a-jiggle">
+              <path fill-rule="evenodd" d="M34 108a66 54 0 1 0 132 0a66 54 0 1 0-132 0zM80 106a20 13 0 1 0 40 0a20 13 0 1 0-40 0z" fill="url(#g-dough)"></path>
+              <path fill-rule="evenodd" d="M46 104a54 40 0 1 1 108 0q0 14-10 12q-6-1-8 8q-3 10-12 6q-6-4-12 6q-6 8-14 0q-6-8-14-2q-10 6-14-6q-2-8-10-8q-14 0-14-16zM77 105a23 15 0 1 0 46 0a23 15 0 1 0-46 0z" fill="url(#g-icing)"></path>
+              <path d="M58 92q6-18 26-24" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".6"></path>
+              <path d="M100 70l7 2M134 84l5 5M64 112l-2 7M140 112l4-6M120 132l6 4M80 134l-6 3M116 68l4-5" stroke-width="4" stroke-linecap="round" fill="none" stroke="#fff"></path>
+              <path d="M70 80l6-4M146 98l2 7M100 138l7 1M128 74l6 2M56 100l-1 7" stroke-width="4" stroke-linecap="round" fill="none" stroke="#ffe066"></path>
+              <path d="M88 64l-6-3M132 124l7-2M68 126l5 5" stroke-width="4" stroke-linecap="round" fill="none" stroke="#74c0fc"></path>
+              <g class="a-blink"><ellipse cx="82" cy="84" rx="7" ry="8.5" fill="#fff" stroke="#7a1f4a" stroke-width="1.4"></ellipse><circle cx="83" cy="85.5" r="3.8" fill="#111"></circle><circle cx="82" cy="84" r="1.3" fill="#fff"></circle></g>
+              <g class="a-blink"><ellipse cx="118" cy="84" rx="7" ry="8.5" fill="#fff" stroke="#7a1f4a" stroke-width="1.4"></ellipse><circle cx="119" cy="85.5" r="3.8" fill="#111"></circle><circle cx="118" cy="84" r="1.3" fill="#fff"></circle></g>
+            </g>
+          </svg>
+        </div>
+
+        <div class="col-span-full row-start-3 mt-[14px] flex gap-[8px] min-[700px]:mt-[calc(var(--s)*28)] min-[700px]:gap-[calc(var(--s)*4)] min-[700px]:pl-[calc(var(--s)*20)]">
+          <button type="button" id="set-default" class="btn raised flex h-[var(--btn-h)] flex-[1_1_0] items-center justify-center min-[700px]:w-[calc(var(--s)*118)] min-[700px]:flex-initial"><span class="btn-in">Set as Default</span></button>
+          <button type="button" id="cancel" class="btn raised flex h-[var(--btn-h)] flex-[1_1_0] items-center justify-center min-[700px]:w-[calc(var(--s)*89)] min-[700px]:flex-initial"><span class="btn-in">Cancel</span></button>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="raised-win w-[min(92vw,640px)] max-h-[calc(100svh-90px)] overflow-auto p-2 text-[20px] leading-none focus:outline-none" role="dialog" aria-labelledby="mirror-title" id="mirror" tabindex="-1" hidden="">
+      <header class="flex h-[36px] items-center gap-2 bg-[linear-gradient(90deg,#0A246A_0%,#3C6EC0_55%,#A6CAF0_100%)] px-2 text-white">
+        <svg class="h-6 w-6 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect x="14" y="19" width="4" height="11" rx="2" fill="#b07a3f"></rect><ellipse cx="16" cy="12" rx="10" ry="11" fill="#e0b040"></ellipse><ellipse cx="16" cy="12" rx="7.5" ry="8.5" fill="#cfeaff"></ellipse><path d="M11 9l5-3M12 13l7-5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path></svg>
+        <h2 id="mirror-title" class="grow truncate">Magic Mirror</h2>
+        <button type="button" id="mirror-close" class="btn raised flex h-7 w-8 shrink-0 items-center justify-center text-black" aria-label="Close Magic Mirror"><span class="btn-in">×</span></button>
+      </header>
+      <div class="space-y-4 p-3 sm:p-5">
+        <div class="sunken relative aspect-[4/3] overflow-hidden bg-black">
+          <video id="mirror-video" class="h-full w-full object-cover [transform:scaleX(-1)]" autoplay="" muted="" playsinline="" aria-label="Live camera preview"></video>
+          <p id="mirror-status" class="absolute inset-1 flex items-center justify-center bg-black/80 p-4 text-center text-white" role="status" aria-live="polite">Starting camera…</p>
+        </div>
+        <fieldset>
+          <legend class="mb-3">Filters</legend>
+          <div class="grid grid-cols-2 gap-2 sm:grid-cols-5" id="mirror-filters">
+            <button type="button" class="btn sunken-thin bg-white px-2 py-2" data-filter="original" aria-pressed="true">Original</button>
+            <button type="button" class="btn raised px-2 py-2" data-filter="grayscale" aria-pressed="false">B&amp;W</button>
+            <button type="button" class="btn raised px-2 py-2" data-filter="sepia" aria-pressed="false">Sepia</button>
+            <button type="button" class="btn raised px-2 py-2" data-filter="vivid" aria-pressed="false">Vivid</button>
+            <button type="button" class="btn raised px-2 py-2" data-filter="dream" aria-pressed="false">Dream</button>
+          </div>
+        </fieldset>
+        <button type="button" id="mirror-retry" class="btn raised px-4 py-2" hidden="">Try camera again</button>
+      </div>
+    </section>
+
+    
+    <section class="raised-win p-[calc(var(--s)*4)] text-[length:var(--fs)] leading-none max-w-full focus:outline-none" role="dialog" aria-labelledby="tetris-title" id="tetris" tabindex="-1" hidden="">
+      <header class="flex h-[var(--title-h)] items-center gap-[calc(var(--s)*5)] bg-[linear-gradient(90deg,#0A246A_0%,#3C6EC0_55%,#A6CAF0_100%)] pl-[calc(var(--s)*3)] pr-[calc(var(--s)*2)] text-white">
+        <svg class="h-[calc(var(--title-h)*.8)] w-[calc(var(--title-h)*.8)] shrink-0" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><path d="M4 0h4v4h-4z" fill="#b000d0"></path><path d="M4 0h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M7 1h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M0 4h4v4h-4z" fill="#b000d0"></path><path d="M0 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M3 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M4 4h4v4h-4z" fill="#b000d0"></path><path d="M4 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M7 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M8 4h4v4h-4z" fill="#b000d0"></path><path d="M8 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M11 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M0 8h4v4h-4z" fill="#0048e0"></path><path d="M0 8h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M3 9h1v3h-3v-1h2z" fill="#002070"></path><path d="M0 12h4v4h-4z" fill="#0048e0"></path><path d="M0 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M3 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M4 12h4v4h-4z" fill="#0048e0"></path><path d="M4 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M7 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M8 12h4v4h-4z" fill="#0048e0"></path><path d="M8 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M11 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M12 4h4v4h-4z" fill="#e8d000"></path><path d="M12 4h4v1h-3v3h-1z" fill="#fff39a"></path><path d="M15 5h1v3h-3v-1h2z" fill="#7a6c00"></path><path d="M12 8h4v4h-4z" fill="#e8d000"></path><path d="M12 8h4v1h-3v3h-1z" fill="#fff39a"></path><path d="M15 9h1v3h-3v-1h2z" fill="#7a6c00"></path><path d="M8 8h4v4h-4z" fill="#d80000"></path><path d="M8 8h4v1h-3v3h-1z" fill="#ff8a8a"></path><path d="M11 9h1v3h-3v-1h2z" fill="#6a0000"></path><path d="M12 12h4v4h-4z" fill="#d80000"></path><path d="M12 12h4v1h-3v3h-1z" fill="#ff8a8a"></path><path d="M15 13h1v3h-3v-1h2z" fill="#6a0000"></path></svg>
+        <h2 id="tetris-title" class="grow truncate tracking-[.02em]">Tetris</h2>
+        <button type="button" id="tetris-close" class="btn raised flex h-[calc(var(--title-h)*.78)] w-[calc(var(--title-h)*.9)] shrink-0 items-center justify-center" aria-label="Close Tetris">
+          <svg class="btn-in h-[60%] w-[50%]" viewBox="0 0 8 7" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H5v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1V5h1V4h1V3H2V2H1V1H0z" fill="#000"></path></svg>
+        </button>
+      </header>
+      <div class="grid grid-cols-[auto_var(--side-w)] gap-[var(--tgap)] p-[var(--tpad)] text-[length:var(--tfs)]">
+        <div class="sunken relative self-start bg-black">
+          <div id="well" class="grid auto-rows-[var(--c)] grid-cols-[repeat(10,var(--c))]" role="img" aria-label="Playing field"></div>
+          <div id="t-overlay" class="raised absolute left-1/2 top-[40%] w-[calc(var(--c)*8)] -translate-x-1/2 -translate-y-1/2 p-[calc(var(--tpad)*.75)] text-center" role="status" aria-live="polite" hidden="">
+            <p id="t-msg" class="mb-2">Paused</p>
+            <button type="button" id="t-action" class="btn raised w-full"><span class="btn-in" id="t-action-label">Resume</span></button>
+          </div>
+        </div>
+        <aside class="flex min-w-0 flex-col gap-[calc(var(--tgap)*.6)]">
+          <div class="sunken-thin bg-face px-[6px] py-[4px]">
+            <p class="mb-1 text-center">Next</p>
+            <div class="sunken-thin bg-black py-[calc(var(--n)*.4)]"><div id="t-next" class="next-grid mx-auto grid auto-rows-[var(--n)] grid-cols-[repeat(4,var(--n))]" aria-hidden="true"></div></div>
+          </div>
+          <div class="sunken-thin bg-face px-[6px] py-[4px]"><p>Score</p><p id="t-score" class="sunken-thin bg-white px-[6px] py-[3px] text-right tabular-nums">0</p></div>
+          <div class="sunken-thin bg-face px-[6px] py-[4px]"><p>Lines</p><p id="t-lines" class="sunken-thin bg-white px-[6px] py-[3px] text-right tabular-nums">0</p></div>
+          <div class="sunken-thin bg-face px-[6px] py-[4px]"><p>Level</p><p id="t-level" class="sunken-thin bg-white px-[6px] py-[3px] text-right tabular-nums">1</p></div>
+          <div class="sunken-thin bg-face px-[6px] py-[4px] flex flex-col items-center gap-[6px] min-[700px]:flex-row"><span class="sunken-thin h-[44px] w-[44px] flex-none bg-white min-[700px]:h-[36px] min-[700px]:w-[36px]" id="tetris-avatar" aria-hidden="true"></span><span class="min-w-0 truncate" id="tetris-player">Cosmo</span></div>
+          <button type="button" id="t-pause" class="btn raised flex h-[calc(var(--pad-h)*.85)] items-center justify-center"><span class="btn-in">Pause</span></button>
+          <button type="button" id="t-new" class="btn raised flex h-[calc(var(--pad-h)*.85)] items-center justify-center"><span class="btn-in">New Game</span></button>
+          <p class="t-keys text-[0.8em] leading-tight text-dark">← → move<br/>↑ / X rotate<br/>↓ soft drop<br/>Space hard drop<br/>P pause</p>
+        </aside>
+        <div class="t-pad col-span-full grid grid-cols-5 gap-[6px] touch-manipulation">
+          <button type="button" class="btn raised flex h-[var(--pad-h)] items-center justify-center" data-act="left" aria-label="Move left"><svg class="h-[40%] max-h-[22px] w-[40%] max-w-[22px]" viewBox="0 0 4 7" aria-hidden="true" shape-rendering="crispEdges"><path d="M3 0h1v7H3V6H2V5H1V4H0V3h1V2h1V1h1z" fill="#000"></path></svg></button>
+          <button type="button" class="btn raised flex h-[var(--pad-h)] items-center justify-center" data-act="down" aria-label="Soft drop"><svg class="h-[40%] max-h-[22px] w-[40%] max-w-[22px]" viewBox="0 0 7 4" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h7v1H6v1H5v1H4v1H3V3H2V2H1V1H0z" fill="#000"></path></svg></button>
+          <button type="button" class="btn raised flex h-[var(--pad-h)] items-center justify-center" data-act="right" aria-label="Move right"><svg class="h-[40%] max-h-[22px] w-[40%] max-w-[22px]" viewBox="0 0 4 7" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h1v1h1v1h1v1h1v1H3v1H2v1H1v1H0z" fill="#000"></path></svg></button>
+          <button type="button" class="btn raised flex h-[var(--pad-h)] items-center justify-center" data-act="rotate" aria-label="Rotate"><svg class="h-[40%] max-h-[22px] w-[40%] max-w-[22px]" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.6 9.5A4.8 4.8 0 1 1 11 4.6" fill="none" stroke="#000" stroke-width="2.2"></path><path d="M8.6 1.8h5.2V7z" fill="#000"></path></svg></button>
+          <button type="button" class="btn raised flex h-[var(--pad-h)] items-center justify-center" data-act="drop" aria-label="Hard drop"><svg class="h-[40%] max-h-[22px] w-[40%] max-w-[22px]" viewBox="0 0 7 6" aria-hidden="true" shape-rendering="crispEdges"><path d="M0 0h7v1H6v1H5v1H4v1H3V3H2V2H1V1H0zM0 5h7v1H0z" fill="#000"></path></svg></button>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <div id="balloon" class="absolute bottom-3 right-3 z-10 max-w-[260px] rounded-[6px] border border-black bg-tip px-3 py-2 text-[19px] leading-[1.1] shadow-[2px_2px_0_rgba(0,0,0,.35)] after:absolute after:bottom-[-9px] after:right-[28px] after:h-[16px] after:w-[16px] after:rotate-45 after:border-b after:border-r after:border-black after:bg-tip after:content-[&#39;&#39;]" role="status" aria-live="polite" hidden=""></div>
+  </main>
+
+  
+  <footer class="relative flex h-[44px] shrink-0 items-center gap-1.5 px-1.5 text-[18px] min-[700px]:h-[52px] min-[700px]:gap-2 min-[700px]:px-2 min-[700px]:text-[21px] bg-face shadow-[inset_0_2px_0_#fff,0_-1px_0_#D4D0C8]">
+    <a href="https://stronglify.com/" class="btn raised flex h-[34px] items-center gap-1.5 px-2.5 min-[700px]:h-[40px] min-[700px]:px-3">
+      <svg class="btn-in h-5 w-5 min-[700px]:h-6 min-[700px]:w-6" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><path d="M5 1h6v1h2v2h1v6h-1v2h-2v1H5v-1H3v-2H2V4h1V2h2z" fill="#ffd43b"></path><path d="M5 5h2v2H5zm4 0h2v2H9zM5 9h1v1h4V9h1v1h-1v1H6v-1H5z" fill="#222"></path></svg>
+      <span class="btn-in">Start</span>
+    </a>
+    <span class="h-[30px] w-[2px] bg-shade shadow-[1px_0_0_#fff] min-[700px]:h-[36px]" aria-hidden="true"></span>
+    <button type="button" class="task btn raised flex h-[34px] w-[40px] shrink-0 items-center justify-center gap-2 px-2 min-[560px]:w-auto min-[560px]:min-w-0 min-[560px]:max-w-[210px] min-[560px]:grow min-[560px]:justify-start min-[560px]:px-2.5 min-[700px]:h-[40px]" data-task="changer" aria-pressed="true" aria-label="Avatar Changer">
+      <svg class="h-5 w-5 shrink-0" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><path d="M1 2h14v11H1z" fill="#d4d0c8"></path><path d="M2 3h12v9H2z" fill="#0a7f8a"></path><path d="M6 5h4v1h1v4h-1v1H6v-1H5V6h1z" fill="#ffd43b"></path><path d="M6 7h1v1H6zm3 0h1v1H9zM7 9h2v1H7z" fill="#222"></path></svg>
+      <span class="hidden truncate min-[560px]:inline">Avatar Changer</span>
+    </button>
+    <button type="button" class="task btn raised flex h-[34px] w-[40px] shrink-0 items-center justify-center gap-2 px-2 min-[560px]:w-auto min-[560px]:min-w-0 min-[560px]:max-w-[210px] min-[560px]:grow min-[560px]:justify-start min-[560px]:px-2.5 min-[700px]:h-[40px]" data-task="tetris" aria-pressed="false" aria-label="Tetris">
+      <svg class="h-5 w-5 shrink-0" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><path d="M4 0h4v4h-4z" fill="#b000d0"></path><path d="M4 0h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M7 1h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M0 4h4v4h-4z" fill="#b000d0"></path><path d="M0 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M3 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M4 4h4v4h-4z" fill="#b000d0"></path><path d="M4 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M7 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M8 4h4v4h-4z" fill="#b000d0"></path><path d="M8 4h4v1h-3v3h-1z" fill="#e58cf5"></path><path d="M11 5h1v3h-3v-1h2z" fill="#5c0070"></path><path d="M0 8h4v4h-4z" fill="#0048e0"></path><path d="M0 8h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M3 9h1v3h-3v-1h2z" fill="#002070"></path><path d="M0 12h4v4h-4z" fill="#0048e0"></path><path d="M0 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M3 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M4 12h4v4h-4z" fill="#0048e0"></path><path d="M4 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M7 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M8 12h4v4h-4z" fill="#0048e0"></path><path d="M8 12h4v1h-3v3h-1z" fill="#7ea4ff"></path><path d="M11 13h1v3h-3v-1h2z" fill="#002070"></path><path d="M12 4h4v4h-4z" fill="#e8d000"></path><path d="M12 4h4v1h-3v3h-1z" fill="#fff39a"></path><path d="M15 5h1v3h-3v-1h2z" fill="#7a6c00"></path><path d="M12 8h4v4h-4z" fill="#e8d000"></path><path d="M12 8h4v1h-3v3h-1z" fill="#fff39a"></path><path d="M15 9h1v3h-3v-1h2z" fill="#7a6c00"></path><path d="M8 8h4v4h-4z" fill="#d80000"></path><path d="M8 8h4v1h-3v3h-1z" fill="#ff8a8a"></path><path d="M11 9h1v3h-3v-1h2z" fill="#6a0000"></path><path d="M12 12h4v4h-4z" fill="#d80000"></path><path d="M12 12h4v1h-3v3h-1z" fill="#ff8a8a"></path><path d="M15 13h1v3h-3v-1h2z" fill="#6a0000"></path></svg>
+      <span class="hidden truncate min-[560px]:inline">Tetris</span>
+    </button>
+    <button type="button" class="task btn raised flex h-[34px] w-[40px] shrink-0 items-center justify-center gap-2 px-2 min-[560px]:w-auto min-[560px]:max-w-[210px] min-[560px]:grow min-[560px]:justify-start min-[560px]:px-2.5 min-[700px]:h-[40px]" data-task="mirror" aria-pressed="false" aria-label="Magic Mirror">
+      <svg class="h-5 w-5 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect x="14" y="19" width="4" height="11" rx="2" fill="#b07a3f"></rect><ellipse cx="16" cy="12" rx="10" ry="11" fill="#e0b040"></ellipse><ellipse cx="16" cy="12" rx="7.5" ry="8.5" fill="#cfeaff"></ellipse></svg>
+      <span class="hidden truncate min-[560px]:inline">Magic Mirror</span>
+    </button>
+    <div class="sunken-thin ml-auto flex h-[34px] shrink-0 items-center gap-2 px-2.5 min-[700px]:h-[40px] min-[700px]:px-3">
+      <span id="tray-avatar" class="block h-6 w-6 min-[700px]:h-7 min-[700px]:w-7" aria-hidden="true"></span>
+      <span id="tray-name" class="hidden min-[480px]:inline">Cosmo</span>
+      <time id="clock" class="tabular-nums">8:02 AM</time>
+    </div>
+  </footer>
+
+  <script>(function(){var KEY="avatar-changer:default";var FALLBACK="cosmo";var list=document.getElementById("names");var options=Array.prototype.slice.call(list.querySelectorAll('[role="option"]'));var pane=document.getElementById("pane");var track=document.getElementById("track");var thumb=document.getElementById("thumb");var balloon=document.getElementById("balloon");var balloonTimer;function optionFor(id){return options.filter(function(o){return o.dataset.avatar===id})[0]}function readDefault(){try{var id=window.localStorage.getItem(KEY);if(id==="browser")id="stronglify";if(id&&optionFor(id))return id}catch(e){}return FALLBACK}function writeDefault(id){try{window.localStorage.setItem(KEY,id)}catch(e){}}var stored=readDefault();var selected=stored;function select(id){var opt=optionFor(id);if(!opt)return;selected=id;options.forEach(function(o){o.setAttribute("aria-selected",o===opt?"true":"false")});list.setAttribute("aria-activedescendant",opt.id);pane.querySelectorAll(".avatar").forEach(function(svg){svg.toggleAttribute("hidden",svg.dataset.avatar!==id)});pane.setAttribute("aria-label","Preview: "+opt.textContent.trim());var top=opt.offsetTop,bottom=top+opt.offsetHeight;if(top<list.scrollTop)list.scrollTop=top;else if(bottom>list.scrollTop+list.clientHeight)list.scrollTop=bottom-list.clientHeight;syncThumb()}function step(delta){var i=options.indexOf(optionFor(selected))+delta;select(options[Math.max(0,Math.min(options.length-1,i))].dataset.avatar)}function showDefault(){var name=optionFor(stored).textContent.trim();["desk-avatar","tray-avatar","tetris-avatar"].forEach(function(slot){var mini=pane.querySelector('.avatar[data-avatar="'+stored+'"]').cloneNode(true);mini.removeAttribute("hidden");mini.setAttribute("class","mini block h-full w-full");mini.setAttribute("aria-hidden","true");document.getElementById(slot).replaceChildren(mini)});document.getElementById("desk-name").textContent=name;document.getElementById("tray-name").textContent=name;document.getElementById("tetris-player").textContent=name}function say(text){balloon.textContent=text;balloon.hidden=false;clearTimeout(balloonTimer);balloonTimer=setTimeout(function(){balloon.hidden=true},3600)}function setDefault(){stored=selected;writeDefault(stored);showDefault();say(optionFor(stored).textContent.trim()+" is now your default avatar.")}function cancel(){select(stored)}function syncThumb(){var ratio=list.clientHeight/list.scrollHeight;if(ratio>=1){thumb.style.display="none";return}var size=Math.max(track.clientHeight*ratio,14);var room=track.clientHeight-size;var progress=list.scrollTop/(list.scrollHeight-list.clientHeight);thumb.style.display="";thumb.style.height=size+"px";thumb.style.transform="translateY("+room*progress+"px)"}thumb.addEventListener("pointerdown",function(e){var startY=e.clientY,startTop=list.scrollTop;var room=track.clientHeight-thumb.offsetHeight;thumb.setPointerCapture(e.pointerId);function move(ev){list.scrollTop=startTop+(ev.clientY-startY)/room*(list.scrollHeight-list.clientHeight)}function up(){thumb.removeEventListener("pointermove",move);thumb.removeEventListener("pointerup",up);thumb.removeEventListener("pointercancel",up)}thumb.addEventListener("pointermove",move);thumb.addEventListener("pointerup",up);thumb.addEventListener("pointercancel",up);e.preventDefault()});track.addEventListener("pointerdown",function(e){if(e.target!==track)return;var below=e.clientY>thumb.getBoundingClientRect().bottom;list.scrollTop+=(below?1:-1)*list.clientHeight});list.addEventListener("scroll",syncThumb);window.addEventListener("resize",syncThumb);options.forEach(function(o){o.addEventListener("click",function(){select(o.dataset.avatar);list.focus({preventScroll:true})});o.addEventListener("dblclick",setDefault)});document.getElementById("prev").addEventListener("click",function(){step(-1)});document.getElementById("next").addEventListener("click",function(){step(1)});document.getElementById("set-default").addEventListener("click",setDefault);document.getElementById("cancel").addEventListener("click",cancel);document.getElementById("close").addEventListener("click",function(){show(null)});document.getElementById("tetris-close").addEventListener("click",function(){show(null)});document.getElementById("mirror-close").addEventListener("click",function(){show(null)});document.addEventListener("keydown",function(e){if(e.altKey||e.ctrlKey||e.metaKey)return;if(current==="tetris"){tetris.key(e);return}if(current==="mirror"){if(e.key==="Escape"){show(null);e.preventDefault()}return}if(current!=="changer")return;var onButton=e.target.closest&&e.target.closest("button, a");if(e.key==="ArrowUp"){step(-1);e.preventDefault()}else if(e.key==="ArrowDown"){step(1);e.preventDefault()}else if(e.key==="Home"){select(options[0].dataset.avatar);e.preventDefault()}else if(e.key==="End"){select(options[options.length-1].dataset.avatar);e.preventDefault()}else if(e.key==="Enter"&&!onButton){setDefault();e.preventDefault()}else if(e.key==="Escape"){cancel()}});document.addEventListener("keyup",function(e){if(current==="tetris")tetris.keyup(e)});var wins={changer:document.getElementById("changer"),tetris:document.getElementById("tetris"),mirror:document.getElementById("mirror")};var tasks=Array.prototype.slice.call(document.querySelectorAll("[data-task]"));var current="changer";function show(id){if(current==="changer"&&id!=="changer")cancel();if(current==="tetris"&&id!=="tetris")tetris.pause();if(current==="mirror"&&id!=="mirror")mirror.close();current=id;Object.keys(wins).forEach(function(k){wins[k].hidden=k!==id});tasks.forEach(function(t){t.setAttribute("aria-pressed",t.dataset.task===id?"true":"false")});if(id==="changer"){select(stored);list.focus({preventScroll:true})}if(id==="tetris"){tetris.open();wins.tetris.focus({preventScroll:true})}if(id==="mirror"){mirror.open();wins.mirror.focus({preventScroll:true})}}var mirror=(function(){var video=document.getElementById("mirror-video"),status=document.getElementById("mirror-status"),retry=document.getElementById("mirror-retry"),stream=null,request=0;var filters={original:"none",grayscale:"grayscale(1)",sepia:"sepia(1)",vivid:"saturate(1.8) contrast(1.12)",dream:"hue-rotate(145deg) saturate(1.5)"};Array.prototype.forEach.call(document.querySelectorAll("#mirror-filters [data-filter]"),function(btn){btn.addEventListener("click",function(){video.style.filter=filters[btn.dataset.filter];Array.prototype.forEach.call(document.querySelectorAll("#mirror-filters [data-filter]"),function(other){var active=other===btn;other.setAttribute("aria-pressed",active?"true":"false");other.classList.toggle("raised",!active);other.classList.toggle("sunken-thin",active);other.classList.toggle("bg-white",active)})})});function message(text){status.textContent=text;status.style.display="flex"}function stop(){request++;if(stream){stream.getTracks().forEach(function(track){track.stop()});stream=null}video.srcObject=null}function open(){stop();var id=request;message("Starting camera…");retry.hidden=true;if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){message("Camera access requires a secure browser connection.");retry.hidden=false;return}navigator.mediaDevices.getUserMedia({audio:false,video:{facingMode:"user"}}).then(function(found){if(id!==request){found.getTracks().forEach(function(track){track.stop()});return}stream=found;video.srcObject=found;status.style.display="none";found.getVideoTracks().forEach(function(track){track.addEventListener("ended",function(){if(id===request){stop();message("Camera stopped. Try again to reopen it.");retry.hidden=false}})});video.play().catch(function(){message("Camera opened, but the preview could not play.");retry.hidden=false})}).catch(function(error){if(id!==request)return;message(error.name==="NotAllowedError"?"Camera permission was denied. Allow access in your browser, then try again.":"Camera unavailable. Check your device and try again.");retry.hidden=false})}retry.addEventListener("click",open);document.addEventListener("visibilitychange",function(){if(document.hidden&&stream){stop();message("Camera paused. Try again to reopen it.");retry.hidden=false}});return{open:open,close:stop}})();var lastPointer="mouse";Array.prototype.forEach.call(document.querySelectorAll(".desk-icon"),function(icon){var open=function(){show(icon.dataset.open)};icon.addEventListener("pointerdown",function(e){lastPointer=e.pointerType||"mouse"});icon.addEventListener("click",function(e){if(icon.dataset.open==="mirror"||e.detail===0||lastPointer!=="mouse")open();else icon.focus()});if(icon.dataset.open!=="mirror")icon.addEventListener("dblclick",open)});tasks.forEach(function(t){t.addEventListener("click",function(){show(current===t.dataset.task?null:t.dataset.task)})});var tetris=(function(){var COLS=10,ROWS=22,HIDDEN=2,VISIBLE=ROWS-HIDDEN;var BASE={I:[[0,1],[1,1],[2,1],[3,1]],J:[[0,0],[0,1],[1,1],[2,1]],L:[[2,0],[0,1],[1,1],[2,1]],O:[[0,0],[1,0],[0,1],[1,1]],S:[[1,0],[2,0],[0,1],[1,1]],T:[[1,0],[0,1],[1,1],[2,1]],Z:[[0,0],[1,0],[1,1],[2,1]]};var SIZE={I:4,O:2};var KICKS={"01":[[0,0],[-1,0],[-1,-1],[0,2],[-1,2]],"10":[[0,0],[1,0],[1,1],[0,-2],[1,-2]],"12":[[0,0],[1,0],[1,1],[0,-2],[1,-2]],"21":[[0,0],[-1,0],[-1,-1],[0,2],[-1,2]],"23":[[0,0],[1,0],[1,-1],[0,2],[1,2]],"32":[[0,0],[-1,0],[-1,1],[0,-2],[-1,-2]],"30":[[0,0],[-1,0],[-1,1],[0,-2],[-1,-2]],"03":[[0,0],[1,0],[1,-1],[0,2],[1,2]]};var KICKS_I={"01":[[0,0],[-2,0],[1,0],[-2,1],[1,-2]],"10":[[0,0],[2,0],[-1,0],[2,-1],[-1,2]],"12":[[0,0],[-1,0],[2,0],[-1,-2],[2,1]],"21":[[0,0],[1,0],[-2,0],[1,2],[-2,-1]],"23":[[0,0],[2,0],[-1,0],[2,-1],[-1,2]],"32":[[0,0],[-2,0],[1,0],[-2,1],[1,-2]],"30":[[0,0],[1,0],[-2,0],[1,2],[-2,-1]],"03":[[0,0],[-1,0],[2,0],[-1,-2],[2,1]]};var SHAPES={};Object.keys(BASE).forEach(function(k){var n=SIZE[k]||3,states=[BASE[k]];for(var r=1;r<4;r++)states.push(states[r-1].map(function(c2){return[n-1-c2[1],c2[0]]}));SHAPES[k]=states});var LINE_SCORE=[0,100,300,500,800];var wellEl=document.getElementById("well"),nextEl=document.getElementById("t-next");var overlay=document.getElementById("t-overlay"),msg=document.getElementById("t-msg");var actionBtn=document.getElementById("t-action"),actionLabel=document.getElementById("t-action-label");var pauseBtn=document.getElementById("t-pause");var cells=[],nextCells=[],cache=[];for(var i=0;i<COLS*VISIBLE;i++){var c=document.createElement("div");c.className="cell";wellEl.appendChild(c);cells.push(c);cache.push("")}for(var j=0;j<8;j++){var nc=document.createElement("div");nc.className="cell";nextEl.appendChild(nc);nextCells.push(nc)}var board,cur,bag,next,score,lines,level,state="idle",timer;function emptyBoard(){var b=[];for(var y=0;y<ROWS;y++){b.push([]);for(var x=0;x<COLS;x++)b[y].push("")}return b}function draw(){if(!bag||!bag.length){bag="IJLOSTZ".split("");for(var i2=bag.length-1;i2>0;i2--){var r=Math.floor(Math.random()*(i2+1)),t=bag[i2];bag[i2]=bag[r];bag[r]=t}}return bag.pop()}function fits(k,r,x,y){var sh=SHAPES[k][r];for(var i2=0;i2<4;i2++){var cx=x+sh[i2][0],cy=y+sh[i2][1];if(cx<0||cx>=COLS||cy<0||cy>=ROWS||board[cy][cx])return false}return true}function interval(){return Math.max(50,Math.pow(.8-(level-1)*.007,level-1)*1e3)}function schedule(){clearTimeout(timer);if(state==="playing")timer=setTimeout(tick2,interval())}function spawn(){cur={k:next,r:0,x:next==="O"?4:3,y:HIDDEN};next=draw();if(!fits(cur.k,cur.r,cur.x,cur.y)){cur=null;end();return}render()}function end(){state="over";clearTimeout(timer);render()}function lock(){var sh=SHAPES[cur.k][cur.r],bottom=0;for(var i2=0;i2<4;i2++){var cy=cur.y+sh[i2][1];board[cy][cur.x+sh[i2][0]]=cur.k;if(cy>bottom)bottom=cy}var cleared=0;for(var y=ROWS-1;y>=0;y--){if(board[y].every(function(v){return v})){board.splice(y,1);board.unshift(new Array(COLS).fill(""));cleared++;y++}}if(cleared){lines+=cleared;score+=LINE_SCORE[cleared]*level;level=Math.floor(lines/10)+1}if(bottom<HIDDEN){cur=null;end();return}spawn();schedule()}function tick2(){if(state!=="playing"||!cur)return;if(fits(cur.k,cur.r,cur.x,cur.y+1)){cur.y++;render();schedule()}else lock()}function move(dx){if(state!=="playing")return;if(fits(cur.k,cur.r,cur.x+dx,cur.y)){cur.x+=dx;render()}}function rotate(dir){if(state!=="playing"||cur.k==="O")return;var to=(cur.r+dir+4)%4,table=(cur.k==="I"?KICKS_I:KICKS)[cur.r+""+to];for(var i2=0;i2<table.length;i2++){if(fits(cur.k,to,cur.x+table[i2][0],cur.y+table[i2][1])){cur.r=to;cur.x+=table[i2][0];cur.y+=table[i2][1];render();return}}}function softDrop(){if(state!=="playing")return;if(fits(cur.k,cur.r,cur.x,cur.y+1)){cur.y++;score++;render();schedule()}else lock()}function hardDrop(){if(state!=="playing")return;var d=0;while(fits(cur.k,cur.r,cur.x,cur.y+d+1))d++;cur.y+=d;score+=d*2;lock()}function ghostY(){var d=0;while(fits(cur.k,cur.r,cur.x,cur.y+d+1))d++;return cur.y+d}function render(){var grid=[];for(var y=HIDDEN;y<ROWS;y++)for(var x=0;x<COLS;x++)grid.push(board[y][x]);if(cur){var sh=SHAPES[cur.k][cur.r],gy=ghostY();for(var i2=0;i2<4;i2++){var idx=(gy+sh[i2][1]-HIDDEN)*COLS+cur.x+sh[i2][0];if(idx>=0&&!grid[idx])grid[idx]="G"}for(i2=0;i2<4;i2++){idx=(cur.y+sh[i2][1]-HIDDEN)*COLS+cur.x+sh[i2][0];if(idx>=0)grid[idx]=cur.k+"!"}}for(i2=0;i2<grid.length;i2++){if(cache[i2]!==grid[i2]){cache[i2]=grid[i2];cells[i2].dataset.k=grid[i2].charAt(0);cells[i2].classList.toggle("is-live",grid[i2].length>1)}}var ns=SHAPES[next][0],minY=Math.min.apply(null,ns.map(function(c2){return c2[1]}));var shift=next==="O"?1:0;for(i2=0;i2<8;i2++)nextCells[i2].dataset.k="";for(i2=0;i2<4;i2++)nextCells[(ns[i2][1]-minY)*4+ns[i2][0]+shift].dataset.k=next;nextEl.classList.toggle("is-3",!SIZE[next]);document.getElementById("t-score").textContent=score;document.getElementById("t-lines").textContent=lines;document.getElementById("t-level").textContent=level;pauseBtn.disabled=state!=="playing"&&state!=="paused";pauseBtn.firstElementChild.textContent=state==="paused"?"Resume":"Pause";overlay.hidden=state==="playing";msg.textContent=state==="over"?"Game Over":"Paused";actionLabel.textContent=state==="over"?"New Game":"Resume"}function newGame(){board=emptyBoard();bag=[];score=0;lines=0;level=1;next=draw();state="playing";spawn();schedule()}function pause(){if(state!=="playing")return;state="paused";clearTimeout(timer);render()}function resume(){if(state!=="paused")return;state="playing";render();schedule()}function act(name){if(name==="left")move(-1);else if(name==="right")move(1);else if(name==="down")softDrop();else if(name==="rotate")rotate(1);else if(name==="drop")hardDrop()}pauseBtn.addEventListener("click",function(){if(state==="paused")resume();else pause()});document.getElementById("t-new").addEventListener("click",newGame);actionBtn.addEventListener("click",function(){if(state==="paused")resume();else newGame()});document.addEventListener("visibilitychange",function(){if(document.hidden)pause()});Array.prototype.forEach.call(document.querySelectorAll(".t-pad [data-act]"),function(btn){var name=btn.dataset.act,delay,repeat;function stop(){clearTimeout(delay);clearInterval(repeat)}btn.addEventListener("pointerdown",function(e){e.preventDefault();act(name);if(name==="left"||name==="right"||name==="down"){stop();delay=setTimeout(function(){repeat=setInterval(function(){act(name)},60)},180)}});["pointerup","pointercancel","pointerleave"].forEach(function(ev){btn.addEventListener(ev,stop)});btn.addEventListener("contextmenu",function(e){e.preventDefault()});btn.addEventListener("click",function(e){if(e.detail===0)act(name)})});var GAME_KEYS=["ArrowLeft","ArrowRight","ArrowDown","ArrowUp"," ","x","X","z","Z","p","P"];return{open:function(){if(state==="idle")newGame();else render()},pause,key:function(e){var k=e.key,onButton=e.target.closest&&e.target.closest("button, a");if(state==="playing"){if(k==="ArrowLeft")move(-1);else if(k==="ArrowRight")move(1);else if(k==="ArrowDown")softDrop();else if((k==="ArrowUp"||k==="x"||k==="X")&&!e.repeat)rotate(1);else if((k==="z"||k==="Z")&&!e.repeat)rotate(-1);else if(k===" "&&!e.repeat)hardDrop();else if(k==="p"||k==="P")pause();else return;e.preventDefault()}else{if((k==="p"||k==="P")&&state==="paused"){resume();e.preventDefault()}else if(k==="Enter"&&!onButton){if(state==="paused")resume();else if(state==="over")newGame();e.preventDefault()}else if(k.indexOf("Arrow")===0||k===" "&&!onButton)e.preventDefault()}},keyup:function(e){if(state==="playing"&&GAME_KEYS.indexOf(e.key)>=0)e.preventDefault()}}})();function tick(){document.getElementById("clock").textContent=new Date().toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"})}select(stored);showDefault();tick();setInterval(tick,3e4);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(syncThumb)})();</script>
+</body></html>
